@@ -3,7 +3,7 @@
 
 You can run `npm run create-pwa`
 
-## IT'S INCLUDES THE PACKAGEs
+## It's includes the packages
 
  - [SASS](https://sass-lang.com/)
  - [material ui](https://v1-3-0.material-ui.com/) 
