@@ -1,0 +1,25 @@
+{
+  "name": "pwa-react-generate",
+  "version": "1.0.0",
+  "description": "### Generator PWA PROJECT based on create-react-app for some small apps",
+  "main": "generate.js",
+  "scripts": {
+    "create-pwa": "NODE_ENV=model node ./generate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguenetoarte/pwa-react-generate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miguenetoarte/pwa-react-generate/issues"
+  },
+  "homepage": "https://github.com/miguenetoarte/pwa-react-generate#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cross-env": "^5.2.0",
+    "readline-sync": "^1.4.9"
+  }
+}
