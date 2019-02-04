@@ -59,16 +59,25 @@ Final file of HML example:
      "VERSION": "v1",
      "REFRESH_TOKEN": "300000",
      "ACCESS_KEY_NAME": "Access-Key",
-     "PARAM_TOKEN_NAME": "PARAM_TOKEN_NAME",
+     "PARAM_TOKEN_NAME": "Authorization",
      "BEARER": "Bearer",
      "BASIC": "dGVzdGU6dGVzdGU="
  }
 ```
 
-## Folder Structure
+
+## Version control
 
 After creation, your project should look like this:
 In path `your-app-name/src/constatns/version.json` has a file for version control. That file is updated when you run the build.
+
+## Folder structure
+
+## Build
+
+- DEV `npm run build-dev`
+- HML `npm run build-hml`
+- PRD `npm run build-prd`
 
 ```
 your-app-name/
@@ -86,18 +95,9 @@ your-app-name/
         webpackDevServer.config.js
     public/
         assets/
-            ...
         index.html
         manifest.json
         service-worker.js
-    scripts/
-        build.js
-        configEnvironment.dev.js
-        configEnvironment.js
-        start.js
-        test.js
-        version.js
-        writeServiceWorker.js
     src/
         assets/
         common/
