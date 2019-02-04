@@ -25,17 +25,17 @@ Your configuration can be write on `your-app-name/.env` for example:
     DEV_ACCESS_KEY_NAME=Access-Key
     DEV_PARAM_TOKEN_NAME=Authorization
     DEV_BEARER=Bearer
-    DEV_BASE64_HML_BASIC=teste:teste
+    BASE64_HML_BASIC=teste:teste
 
     HML_NODE_ENV=development
-    HML_APP_NAME=
-    HML_API_HOST=
+    HML_APP_NAME=boilergen
+    HML_API_HOST=http://app-url
     HML_VERSION=v1
     HML_REFRESH_TOKEN=300000
     HML_ACCESS_KEY_NAME=Access-Key
-    HML_PARAM_TOKEN_NAME=Authorization
+    HML_PARAM_TOKEN_NAME=c
     HML_BEARER=Bearer
-    HML_BASE64_HML_BASIC=teste:teste
+    BASE64_HML_BASIC=teste:teste
 
     PRD_NODE_ENV=production
     PRD_APP_NAME=
@@ -46,13 +46,29 @@ Your configuration can be write on `your-app-name/.env` for example:
     PRD_ACCESS_KEY_NAME=Access-Key
     PRD_PARAM_TOKEN_NAME=Authorization
     PRD_BEARER=Bearer
-    PRD_BASE64_PRD_BASIC=teste:teste
+    BASE64_PRD_BASIC=teste:teste
 ```
-When you to start the app It will be genereted an app.json file in `your-app-name/src/config/app.json` as that variable.
+When you to start the app It will be genereted an app.json file in `your-app-name/src/config/app.json` as that variable. 
+Final file of HML example:
+
+```json
+ {
+     "NODE_ENV": "development",
+     "APP_NAME": "boilergen",
+     "API_HOST": "http://app-url",
+     "VERSION": "v1",
+     "REFRESH_TOKEN": "300000",
+     "ACCESS_KEY_NAME": "Access-Key",
+     "PARAM_TOKEN_NAME": "PARAM_TOKEN_NAME",
+     "BEARER": "Bearer",
+     "BASIC": "dGVzdGU6dGVzdGU="
+ }
+```
 
 ## Folder Structure
 
 After creation, your project should look like this:
+In path `your-app-name/src/constatns/version.json` has a file for version control. That file is updated when you run the build.
 
 ```
 your-app-name/
