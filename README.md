@@ -71,13 +71,14 @@ Final file of HML example:
 After creation, your project should look like this:
 In path `your-app-name/src/constatns/version.json` has a file for version control. That file is updated when you run the build.
 
-## Folder structure
-
 ## Build
 
 - DEV `npm run build-dev`
 - HML `npm run build-hml`
 - PRD `npm run build-prd`
+
+## Folder structure
+
 
 ```
 your-app-name/
