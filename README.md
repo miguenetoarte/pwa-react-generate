@@ -1,5 +1,5 @@
 
-# PWA REACT GENERATE
+# Pwa React Generate
 
 You can run `npm run create-pwa` and this project will start with [Create React App](https://github.com/facebookincubator/create-react-app). 
 
