@@ -4,7 +4,7 @@
   "description": "### Generator PWA PROJECT based on create-react-app for some small apps",
   "main": "generate.js",
   "scripts": {
-    "create-pwa": "NODE_ENV=model node ./generate.js"
+    "create-pwa": "node ./BuildGenerate.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/miguenetoarte/pwa-react-generate#readme",
   "dependencies": {
-    "chalk": "^2.4.1",
+    "chalk": "^2.4.2",
     "cross-env": "^5.2.0",
     "readline-sync": "^1.4.9"
   }

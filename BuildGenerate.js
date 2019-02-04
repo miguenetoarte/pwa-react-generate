@@ -48,9 +48,9 @@ class BuildGenerate {
         console.log(this._chalk.green(`Copying ${this._model}...  (this one is blazing fast, i swear) `));
         await this.execbash(`cd ${this._name} && rm -rf ./src`)
         await this.execbash(`cp -r ./${this._model}/* ./${this._name}/`);
-        await this.execbash(`cd ${this._name} && touch .env && npm install`)
-        console.log(this._chalk.green('Getting some libs with yarn...'));
-        console.log(this._chalk.green(`SUCCESS... your project is available in ${this._name} folder\n Please. Access cd/${this._name} and run npm start`));
+        await this.execbash(`cd ${this._name} && touch .env && npm install`);
+        console.log(this._chalk.green(`Generated successfully!\nYour app is available in ${this._name} folder\nStarting your application...`));
+        await this.execbash(`cd ${this._name} && npm start`);
     }
 
     async writeEnv() {
@@ -70,9 +70,8 @@ class BuildGenerate {
         await this.questionProjectName();
         await this.createApp();
         this.writeEnv();
+
     }
 }
 
 new BuildGenerate().genereate();
-
-module.exports = BuildGenerate;
