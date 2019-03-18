@@ -2,10 +2,28 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionAuth from '../../../store/auth/actions';
+import * as uiActions from "../../../store/ui/actions";
+import * as uiSelectors from "../../../store/ui/reducer";
+import * as routers from "../../../constants/routers";
+import {withRouter} from "react-router-dom";
 
 class FormLogin extends React.Component {
 
+    constructor() {
+        super();
+        this.state = {
+            username: 'miguelnetoarte@gmail.com',
+            password: '',
+            device: ''
+        };
+    }
+
+    componentDidMount() {
+        this.props.setNavigation(routers.ROOT, this.state);
+    }
+
     render() {
+        console.log(this.props);
         return (
             <div>
                 <h1>Login</h1>
@@ -15,8 +33,13 @@ class FormLogin extends React.Component {
     }
 }
 
+const mapStateToProps = state => ({
+    ui: uiSelectors.getUi(state)
+})
+
 const mapDispatchToProps = dispatch => bindActionCreators({
-    ...actionAuth
+    ...actionAuth,
+    ...uiActions,
 }, dispatch)
 
-export default connect(null, mapDispatchToProps)(FormLogin);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FormLogin));

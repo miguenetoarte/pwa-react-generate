@@ -17,12 +17,12 @@ import Logout from "./containers/logout/Logout";
 ReactDOM.render(
         <Provider store={state}>
 			<PersistGate loading={null} persistor={persistor}>
-				<App>
                     <Router key={Math.random()}>
-                        <Route exact path={routers.ROOT} component={Login}/>
-                        <Route path={routers.LOGOUT} component={Logout}/>
+                        <App>
+                            <Route exact path={routers.ROOT} component={Login}/>
+                            <Route path={routers.LOGOUT} component={Logout}/>
+                        </App>
                     </Router>
-                </App>
             </PersistGate>
         </Provider>,
     document.getElementById('root'));
