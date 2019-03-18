@@ -3,16 +3,12 @@ import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ContentUnlogged from "../../common/contentUnlogged/ContentUnlogged";
 import HeaderUnlogged from "../../common/header/headerUnlogged/HeaderUnlogged";
-import * as uiActions from "../../store/ui/actions";
-import * as uiSelectors from "../../store/ui/reducer";
-import * as routers from "../../constants/routers";
+import * as uiActions from "../../store/ui/navigation/actions";
+import * as uiSelectors from "../../store/ui/navigation/reducer";
 import {withRouter} from "react-router-dom";
 
 class Logout extends React.Component {
 
-    componentDidMount() {
-        this.props.setNavigation(routers.LOGOUT, {});
-    }
     render() {
         return (<ContentUnlogged>
             <HeaderUnlogged/>

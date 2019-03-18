@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import * as uiSelectors from "./store/ui/reducer";
+import * as uiSelectors from "./store/ui/navigation/reducer";
 import {withRouter} from "react-router-dom";
 
 class App extends React.Component {
@@ -10,7 +10,7 @@ class App extends React.Component {
   }
 
   render() {
-    return this.props.children
+    return this.props.children;
   }
 }
 

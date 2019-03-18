@@ -1,8 +1,9 @@
 import * as Type from "./actionsTypes";
 
 const INITAL_STATE = {
-    byId: {},
-    error: {}
+    username: '',
+    password: '',
+    device: ''
 };
 
 export default function (state = INITAL_STATE, action) {
@@ -10,20 +11,9 @@ export default function (state = INITAL_STATE, action) {
         case Type.FETCH_AUTH_SUCCESS: {
             return {
                 ...state,
-                byId: {
-                    ...state.byId,
-                    ...action.data
-                }
-            }
-        }
-
-        case Type.FETCH_AUTH_FAILED: {
-            return {
-                ...state,
-                error: {
-                    ...state.error,
-                    ...action.error
-                }
+                username: action.username,
+                password: action.password,
+                device: action.device
             }
         }
 

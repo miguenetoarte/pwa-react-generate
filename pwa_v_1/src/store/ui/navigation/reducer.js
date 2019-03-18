@@ -1,5 +1,5 @@
 import * as Type from "./actionsTypes";
-import * as routers from "../../constants/routers";
+import * as routers from "../../../constants/routers";
 
 const INITAL_STATE = {
     byId: { url: routers.ROOT, stateInitial: {} }
@@ -18,4 +18,4 @@ export default function (state = INITAL_STATE, action) {
     }
 };
 
-export const getUi = (state) => state.rootState.ui.byId;
+export const getUi = (state) => state.ui.navigation;
