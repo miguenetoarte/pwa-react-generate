@@ -9,8 +9,8 @@ class FormLogin extends React.Component {
         console.log(this.props);
         return (
             <div>
-                <h1>Hello, are you app maker?</h1>
-                <p>So insert your form here <small style={{color: 'blue'}}>src/containers/login/form/FormLogin.js</small></p>
+                <h1>Hello</h1>
+                <p>Login component: <small style={{color: 'blue'}}>src/containers/login/form/FormLogin.js</small></p>
             </div>
         );
     }

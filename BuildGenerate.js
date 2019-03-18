@@ -3,7 +3,7 @@ const exec = require('child_process').exec;
 class BuildGenerate {
 
     constructor() {
-        this._model = 'pwa_v_0';
+        this._model = 'pwa_v_1';
         this._name = 'project';
         this._chalk = '';
         this._readLineAux = '';
