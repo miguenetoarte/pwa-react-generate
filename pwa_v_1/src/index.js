@@ -11,6 +11,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import * as routers from "./constants/routers";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from "./containers/login/Login";
+import Logout from "./containers/logout/Logout";
 
 
 ReactDOM.render(
@@ -19,6 +20,7 @@ ReactDOM.render(
 				<App>
                     <Router key={Math.random()}>
                         <Route exact path={routers.ROOT} component={Login}/>
+                        <Route path={routers.LOGOUT} component={Logout}/>
                     </Router>
                 </App>
             </PersistGate>

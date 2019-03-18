@@ -1,13 +1,15 @@
 import React from 'react'
 import ContentUnlogged from "../../common/contentUnlogged/ContentUnlogged";
-import FormLogin from "./form/FormLogin";
 import HeaderUnlogged from "../../common/header/headerUnlogged/HeaderUnlogged";
 
-const Login = () => (
+const Logout = () => (
     <ContentUnlogged>
         <HeaderUnlogged/>
-        <FormLogin/>
+        <div>
+            <h1>Logout</h1>
+            <p>Logout component: <small style={{color: 'blue'}}>src/containers/logout/Logout.js</small></p>
+        </div>
     </ContentUnlogged>
 );
 
-export default Login
+export default Logout

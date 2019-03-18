@@ -6,10 +6,9 @@ import * as actionAuth from '../../../store/auth/actions';
 class FormLogin extends React.Component {
 
     render() {
-        console.log(this.props);
         return (
             <div>
-                <h1>Hello</h1>
+                <h1>Login</h1>
                 <p>Login component: <small style={{color: 'blue'}}>src/containers/login/form/FormLogin.js</small></p>
             </div>
         );

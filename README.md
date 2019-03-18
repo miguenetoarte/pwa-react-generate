@@ -1,5 +1,5 @@
 
-# Pwa Reactjs Generate V1.1.1-beta 
+# Pwa Generate V1.1.1-beta 
 
 This project uses [React version 16.8.4](https://reactjs.org/versions). 
 You can run `npm run create-pwa` and this project will start with [Create React App](https://github.com/facebookincubator/create-react-app). 
