@@ -19,8 +19,8 @@ ReactDOM.render(
 			<PersistGate loading={null} persistor={persistor}>
                     <Router key={Math.random()}>
                         <App>
-                            <PrivateRoute path={routers.LOGOUT} component={Logout} />
                             <Route exact path={routers.ROOT} component={Login}/>
+                            <PrivateRoute path={routers.LOGOUT} component={Logout} />
                         </App>
                     </Router>
             </PersistGate>
