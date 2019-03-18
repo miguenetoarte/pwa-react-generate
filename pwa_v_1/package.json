@@ -72,9 +72,14 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "start": "node -r dotenv/config scripts/configEnvironment.dev.js && node scripts/start.js",
+    "start-hml": "node -r dotenv/config scripts/configEnvironment.hml.js && node scripts/start.js",
+    "start-prd": "node -r dotenv/config scripts/configEnvironment.js && node scripts/start.js",
+    "build-prd": "npm install && node -r dotenv/config scripts/configEnvironment.js && node scripts/writeServiceWorker.js && node scripts/version.js && node scripts/build.js",
+    "build-hml": "npm install && node -r dotenv/config scripts/configEnvironment.hml.js && node scripts/writeServiceWorker.js && node scripts/version.hml.js && node scripts/build.js",
+    "build-dev": "npm install && node -r dotenv/config scripts/configEnvironment.dev.js && node scripts/writeServiceWorker.js && node scripts/version.hml.js && node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "pwa": "node scripts/writeServiceWorker.js && node scripts/build.js && node server.js"
   },
   "eslintConfig": {
     "extends": "react-app"

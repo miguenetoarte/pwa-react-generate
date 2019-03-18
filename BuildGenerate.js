@@ -16,7 +16,7 @@ class BuildGenerate {
     }
 
     printDescription() {
-        console.log(this._chalk.yellow("\nPWA REACT GENERATE\n"));
+        console.log(this._chalk.yellow("\nPwa Reactjs Generate\n"));
     }
 
     execbash(command){
@@ -49,8 +49,7 @@ class BuildGenerate {
         await this.execbash(`cd ${this._name} && rm -rf ./src`)
         await this.execbash(`cp -r ./${this._model}/* ./${this._name}/`);
         await this.execbash(`cd ${this._name} && touch .env && npm install`);
-        console.log(this._chalk.green(`Generated successfully!\nYour app is available in ${this._name} folder\nStarting your application...`));
-        await this.execbash(`cd ${this._name} && npm start`);
+        console.log(this._chalk.green(`Generated successfully!\nYour app is available in ${this._name} folder.`));
     }
 
     async writeEnv() {
