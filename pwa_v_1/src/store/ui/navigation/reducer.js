@@ -2,7 +2,8 @@ import * as Type from "./actionsTypes";
 import * as routers from "../../../constants/routers";
 
 const INITAL_STATE = {
-    byId: { url: routers.ROOT, stateInitial: {} }
+    url: routers.ROOT,
+    stateInitial: {}
 };
 
 export default function (state = INITAL_STATE, action) {
@@ -10,7 +11,8 @@ export default function (state = INITAL_STATE, action) {
         case Type.NAVIGATION: {
             return {
                 ...state,
-                byId: { url: action.url, stateInitial: action.stateInitial },
+                url: action.url,
+                stateInitial: action.stateInitial
             }
         }
         default:

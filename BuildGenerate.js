@@ -48,6 +48,7 @@ class BuildGenerate {
         console.log(this._chalk.green(`Copying ${this._model}...  (this one is blazing fast, i swear) `));
         await this.execbash(`cd ${this._name} && rm -rf ./src`)
         await this.execbash(`cp -r ./${this._model}/* ./${this._name}/`);
+        await this.execbash(`cp -r ./README.md ./${this._name}/README.md`);
         await this.execbash(`cd ${this._name} && touch .env && npm install`);
         console.log(this._chalk.green(`Generated successfully!\nYour app is available in ${this._name} folder.`));
     }
