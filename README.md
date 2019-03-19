@@ -1,7 +1,8 @@
 
 # Pwa Reactjs Generate
 
-You can run `npm run create-pwa` and this project will start with [Create React App](https://github.com/facebookincubator/create-react-app). 
+This project uses [React version 16.8.4](https://reactjs.org/versions). 
+You can run `npm run create-pwa` and project will start with [Create React App](https://github.com/facebookincubator/create-react-app). 
 
 ## It's includes the packages
 
@@ -11,6 +12,7 @@ You can run `npm run create-pwa` and this project will start with [Create React 
  - [redux-saga](https://redux-saga.js.org/)
  - [redux-persist](https://github.com/rt2zz/redux-persist)
  - [reselect](https://github.com/reduxjs/reselect)
+ - [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start)
 
 ## App config
 

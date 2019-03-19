@@ -3,10 +3,17 @@ const exec = require('child_process').exec;
 class BuildGenerate {
 
     constructor() {
-        this._model = 'model';
+        this._model = 'pwa_v_1';
         this._name = 'project';
         this._chalk = '';
         this._readLineAux = '';
+        this._currentVersion = 'v16.8.4';
+    }
+
+    questionReactVersion() {
+        process.stdin.isTTY = process.stdout.isTTY = true;
+        let number = this._readLineAux.question(this._chalk.green(`Choose Rectjs version:\n\n1 - ${this._currentVersion}\n2 - v16.4.1\n\nIt is recomended to use ${this._currentVersion}\nWhat version do you want? 1/2: `));
+        this._model = number == 2 ? 'pwa_v_0' : 'pwa_v_1';
     }
 
     questionProjectName() {
@@ -16,7 +23,7 @@ class BuildGenerate {
     }
 
     printDescription() {
-        console.log(this._chalk.yellow("\nPWA REACT GENERATE\n"));
+        console.log(this._chalk.yellow("\nPwa Reactjs Generate\n"));
     }
 
     execbash(command){
@@ -48,9 +55,9 @@ class BuildGenerate {
         console.log(this._chalk.green(`Copying ${this._model}...  (this one is blazing fast, i swear) `));
         await this.execbash(`cd ${this._name} && rm -rf ./src`)
         await this.execbash(`cp -r ./${this._model}/* ./${this._name}/`);
+        await this.execbash(`cp -r ./README.md ./${this._name}/README.md`);
         await this.execbash(`cd ${this._name} && touch .env && npm install`);
-        console.log(this._chalk.green(`Generated successfully!\nYour app is available in ${this._name} folder\nStarting your application...`));
-        await this.execbash(`cd ${this._name} && npm start`);
+        console.log(this._chalk.green(`Generated successfully!\nYour app is available in ${this._name} folder.`));
     }
 
     async writeEnv() {
@@ -67,6 +74,7 @@ class BuildGenerate {
             this.importLibs();
             this.printDescription();
         }
+        await this.questionReactVersion();
         await this.questionProjectName();
         await this.createApp();
         this.writeEnv();
