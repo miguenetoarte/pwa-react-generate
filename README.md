@@ -71,7 +71,7 @@ Final file of HML example:
 ## Version control
 
 After creation, your project should look like this:
-In path `your-app-name/src/constatns/version.json` has a file for version control. That file is updated when you run the build.
+In path `your-app-name/src/constantns/version.json` has a file for version control. That file is updated when you run the build.
 
 ## Build
 
