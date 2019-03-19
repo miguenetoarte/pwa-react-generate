@@ -24,6 +24,6 @@ const theme = createMuiTheme({
     },
 });
 
-const Template = (props) => (<MuiThemeProvider theme={theme}>{props.children}</MuiThemeProvider>)
+const Theme = (props) => (<MuiThemeProvider theme={theme}>{props.children}</MuiThemeProvider>)
 
-export default Template;
+export default Theme;

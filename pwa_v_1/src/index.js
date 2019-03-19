@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import Routers from "./containers/Routers";
-import Template from "./containers/Template";
+import Theme from "./containers/Theme";
 import StoreContainer from "./containers/StoreContainer";
 
 ReactDOM.render(
-    <Template>
+    <Theme>
        <StoreContainer>
             <Routers/>
         </StoreContainer>
-    </Template>,
+    </Theme>,
     document.getElementById('root'));
 registerServiceWorker();
