@@ -81,7 +81,6 @@ In path `your-app-name/src/constantns/version.json` has a file for version contr
 
 ## Folder structure
 
-
 ```
 your-app-name/
     README.md
