@@ -7,6 +7,13 @@ class BuildGenerate {
         this._name = 'project';
         this._chalk = '';
         this._readLineAux = '';
+        this._currentVersion = 'v16.8.4';
+    }
+
+    questionReactVersion() {
+        process.stdin.isTTY = process.stdout.isTTY = true;
+        let number = this._readLineAux.question(this._chalk.green(`Choose Rectjs version:\n\n1 - ${this._currentVersion}\n2 - v16.4.1\n\nIt is recomended to use ${this._currentVersion}\nWhat version do you want? 1/2: `));
+        this._model = number == 2 ? 'pwa_v_0' : 'pwa_v_1';
     }
 
     questionProjectName() {
@@ -67,6 +74,7 @@ class BuildGenerate {
             this.importLibs();
             this.printDescription();
         }
+        await this.questionReactVersion();
         await this.questionProjectName();
         await this.createApp();
         this.writeEnv();
