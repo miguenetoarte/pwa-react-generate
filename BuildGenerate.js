@@ -11,15 +11,15 @@ class BuildGenerate {
     }
 
     questionReactVersion() {
-        process.stdin.isTTY = process.stdout.isTTY = true;
-        let number = this._readLineAux.question(this._chalk.green(`Choose Rectjs version:\n\n1 - ${this._currentVersion}\n2 - v16.4.1\n\nIt is recomended to use ${this._currentVersion}\nWhat version do you want? 1/2: `));
-        this._model = number == 2 ? 'pwa_v_0' : 'pwa_v_1';
+        // process.stdin.isTTY = process.stdout.isTTY = true;
+        // let number = this._readLineAux.question(this._chalk.green(`Choose Rectjs version:\n\n1 - ${this._currentVersion}\n2 - v16.4.1\n\nIt is recomended to use ${this._currentVersion}\nWhat version do you want? 1/2: `));
+        // this._model = number == 2 ? 'pwa_v_0' : 'pwa_v_1';
     }
 
     questionProjectName() {
         process.stdin.isTTY = process.stdout.isTTY = true;
         this._name = this._readLineAux.question(this._chalk.green('What is your app name? '));
-        console.log(this._chalk.blue(`Creating app ${this._name}...`));
+        console.log(this._chalk.blue(`Creating ${this._name} app with reactjs version ${this._currentVersion}, please wait...`));
     }
 
     printDescription() {
