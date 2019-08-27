@@ -20,6 +20,6 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "cross-env": "^5.2.0",
-    "readline-sync": "^1.4.9"
+    "readline-sync": "^1.4.10"
   }
 }

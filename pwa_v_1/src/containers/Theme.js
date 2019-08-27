@@ -1,8 +1,7 @@
-import React from 'react';
-import '../assets/scss/normalize.scss';
-import '../assets/scss/materialize-icon.scss';
-import '../assets/scss/App.scss';
-import {createMuiTheme, MuiThemeProvider} from '@material-ui/core/styles';
+import React, { Fragment} from 'react';
+import '../assets/css/App.css';
+import {createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
 const theme = createMuiTheme({
     palette: {
@@ -24,6 +23,13 @@ const theme = createMuiTheme({
     },
 });
 
-const Theme = (props) => (<MuiThemeProvider theme={theme}>{props.children}</MuiThemeProvider>)
+const Theme = (props) => (
+    <Fragment>
+        <CssBaseline />
+        <MuiThemeProvider theme={theme}>
+        {props.children}
+        </MuiThemeProvider>
+    </Fragment>
+)
 
 export default Theme;

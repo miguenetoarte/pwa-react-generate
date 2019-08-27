@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as /*Router,*/ Route, Redirect } from 'react-router-dom';
 
   const fakeAuth = {
     isAuthenticated: true, //set false when user doesn't logged

@@ -1,68 +1,121 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Pwa Reactjs Generate
 
-In the project directory, you can run:
+This project uses [React version 16.8.4](https://reactjs.org/versions). 
+You can run `npm run create-pwa` and project will start with [Create React App](https://github.com/facebookincubator/create-react-app). 
 
-### `npm start`
+## It's includes the packages
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ - [Sass](https://sass-lang.com/)
+ - [material ui](https://material-ui.com/) 
+ - [redux](https://redux.js.org/)
+ - [redux-saga](https://redux-saga.js.org/)
+ - [redux-persist](https://github.com/rt2zz/redux-persist)
+ - [reselect](https://github.com/reduxjs/reselect)
+ - [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## App config
 
-### `npm test`
+Your configuration can be write on `your-app-name/.env` for example:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+    DEV_NODE_ENV=development
+    DEV_APP_NAME=
+    DEV_API_HOST=
+    DEV_VERSION=v1
+    DEV_REFRESH_TOKEN=300000
+    DEV_ACCESS_KEY_NAME=Access-Key
+    DEV_PARAM_TOKEN_NAME=Authorization
+    DEV_BEARER=Bearer
+    BASE64_HML_BASIC=teste:teste
 
-### `npm run build`
+    HML_NODE_ENV=development
+    HML_APP_NAME=boilergen
+    HML_API_HOST=http://app-url
+    HML_VERSION=v1
+    HML_REFRESH_TOKEN=300000
+    HML_ACCESS_KEY_NAME=Access-Key
+    HML_PARAM_TOKEN_NAME=c
+    HML_BEARER=Bearer
+    BASE64_HML_BASIC=teste:teste
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    PRD_NODE_ENV=production
+    PRD_APP_NAME=
+    PRD_HOST_TOKEN=
+    PRD_API_HOST=
+    PRD_VERSION=v1
+    PRD_REFRESH_TOKEN=300000
+    PRD_ACCESS_KEY_NAME=Access-Key
+    PRD_PARAM_TOKEN_NAME=Authorization
+    PRD_BEARER=Bearer
+    BASE64_PRD_BASIC=teste:teste
+```
+When you to start the app It will be genereted an app.json file in `your-app-name/src/config/app.json` as that variable. 
+Final file of HML example:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```json
+ {
+     "NODE_ENV": "development",
+     "APP_NAME": "boilergen",
+     "API_HOST": "http://app-url",
+     "VERSION": "v1",
+     "REFRESH_TOKEN": "300000",
+     "ACCESS_KEY_NAME": "Access-Key",
+     "PARAM_TOKEN_NAME": "Authorization",
+     "BEARER": "Bearer",
+     "BASIC": "dGVzdGU6dGVzdGU="
+ }
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Version control
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+After creation, your project should look like this:
+In path `your-app-name/src/constantns/version.json` has a file for version control. That file is updated when you run the build.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Build
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- DEV `npm run build-dev`
+- HML `npm run build-hml`
+- PRD `npm run build-prd`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Folder structure
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+your-app-name/
+    README.md
+    config
+        jest/
+            cssTransform.js
+            fileTransform.js
+        env.js
+        paths.js
+        poths.js
+        polyfills.js
+        webpack.config.dev.js
+        webpack.config.prod.js
+        webpackDevServer.config.js
+    public/
+        assets/
+        index.html
+        manifest.json
+        service-worker.js
+    src/
+        assets/
+        common/
+        config/
+        constants/
+        containers/
+        models/
+        sagas/
+        services/
+        store/
+        test/
+        utilites/
+        App.js
+        index.js
+        registerServiceWorker.js
+        .env
+        .gitignore
+        server.js
+```
