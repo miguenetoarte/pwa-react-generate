@@ -5,11 +5,6 @@ import {withRouter} from "react-router-dom";
 
 class App extends React.Component {
 
-  componentDidMount() {
-    // console.log(this.props.ui);
-    // this.props.history.push(this.props.ui.url);
-  }
-
   render() {
     return this.props.children;
   }
