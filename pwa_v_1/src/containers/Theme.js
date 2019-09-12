@@ -25,8 +25,8 @@ const theme = createMuiTheme({
 
 const Theme = (props) => (
     <Fragment>
-        <CssBaseline />
         <MuiThemeProvider theme={theme}>
+        <CssBaseline />
         {props.children}
         </MuiThemeProvider>
     </Fragment>
