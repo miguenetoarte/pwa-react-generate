@@ -57,6 +57,7 @@ class BuildGenerate {
         await this.execbash(`cp -r ./${this._model}/* ./${this._name}/`);
         await this.execbash(`cp -r ./README.md ./${this._name}/README.md`);
         await this.execbash(`cd ${this._name} && touch .env && npm install`);
+        await this.execbash(`mv ./${this._name} ../${this._name}`);
         console.log(this._chalk.green(`Generated successfully!\nYour app is available in ${this._name} folder.`));
     }
 
