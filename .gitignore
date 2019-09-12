@@ -8,10 +8,6 @@
 # testing
 /coverage
 /develop
-<<<<<<< HEAD
-
-=======
->>>>>>> 8bf0df1ba80880246de5013b1159a2fc9f2c010d
 # production
 /build
 
