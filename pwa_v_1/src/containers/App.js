@@ -1,17 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import * as uiSelectors from "../store/ui/navigation/reducer";
-import {withRouter} from "react-router-dom";
+import Routers from './Routers';
 
-class App extends React.Component {
+const App = () => (<Routers/>)
 
-  render() {
-    return this.props.children;
-  }
-}
-
-const mapStateToProps = state => ({
-  ui: uiSelectors.getUi(state)
-})
-
-export default withRouter(connect(mapStateToProps, null)(App));
+export default App;

@@ -1,5 +1,7 @@
 const exec = require('child_process').exec;
 
+const lastVersion = 'v16.9.0';
+
 class BuildGenerate {
 
     constructor() {
@@ -7,7 +9,7 @@ class BuildGenerate {
         this._name = 'project';
         this._chalk = '';
         this._readLineAux = '';
-        this._currentVersion = 'v16.8.4';
+        this._currentVersion = lastVersion;
     }
 
     questionReactVersion() {
