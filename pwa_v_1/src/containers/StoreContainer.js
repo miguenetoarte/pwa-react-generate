@@ -3,10 +3,10 @@ import {Provider} from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import {persistor, state} from '../store/store';
 
-const StoreContainer = (props) => (
+const StoreContainer = ({ children }) => (
     <Provider store={state}>
         <PersistGate loading={null} persistor={persistor}>
-            {props.children}
+            {children}
         </PersistGate>
     </Provider>)
 

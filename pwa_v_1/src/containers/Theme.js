@@ -1,4 +1,4 @@
-import React, { Fragment} from 'react';
+import React from 'react';
 import '../assets/css/App.css';
 import {createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -23,13 +23,13 @@ const theme = createMuiTheme({
     },
 });
 
-const Theme = (props) => (
-    <Fragment>
+const Theme = ({ children }) => (
+    <>
         <MuiThemeProvider theme={theme}>
-        <CssBaseline />
-        {props.children}
+            <CssBaseline />
+            {children}
         </MuiThemeProvider>
-    </Fragment>
+    </>
 )
 
 export default Theme;
