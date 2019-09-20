@@ -1,7 +1,7 @@
 import React, { Fragment, PureComponent } from 'react';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as uiActions from "../store/ui/navigation/actions";
+import * as uiActions from "../../store/ui/navigation/actions";
 
 class NavigationKeeper extends PureComponent {
 

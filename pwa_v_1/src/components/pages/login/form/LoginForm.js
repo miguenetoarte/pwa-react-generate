@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import * as selectorsAuth from "../../../store/auth/reducer";
+import * as selectorsAuth from "../../../../store/auth/reducer";
 import {withRouter} from "react-router-dom";
 
 class LoginForm extends React.Component {

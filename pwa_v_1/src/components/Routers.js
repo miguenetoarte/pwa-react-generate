@@ -2,11 +2,11 @@ import React from 'react';
 import * as routers from "../constants/routers";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
-import { HeaderContent, FooterContent } from "../common";
+import { HeaderContent, FooterContent } from "./layout";
 import { 
     Login, 
     Logout
-} from "./";
+} from "./pages";
 
 const Routers = () => (
         <Router key={Math.random()}>

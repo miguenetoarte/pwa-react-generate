@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
-import Theme from "./containers/Theme";
-import StoreContainer from "./containers/StoreContainer";
-import App from "./containers/App";
+import Theme from "./components/Theme";
+import StoreContainer from "./components/StoreContainer";
+import App from "./components/App";
 
 ReactDOM.render(
     <Theme>

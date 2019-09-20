@@ -1,7 +1,7 @@
 
 # Pwa Reactjs Generate
 
-This project uses [React version 16.8.4](https://reactjs.org/versions). 
+This project uses [React version 16.9.0](https://reactjs.org/versions). 
 You can run `npm run create-pwa` and project will start with [Create React App](https://github.com/facebookincubator/create-react-app). 
 
 ## It's includes the packages

@@ -1,8 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as uiActions from "../../store/ui/navigation/actions";
-import * as uiSelectors from "../../store/ui/navigation/reducer";
+import * as uiActions from "../../../store/ui/navigation/actions";
+import * as uiSelectors from "../../../store/ui/navigation/reducer";
 import {withRouter} from "react-router-dom";
 
 class Logout extends React.Component {

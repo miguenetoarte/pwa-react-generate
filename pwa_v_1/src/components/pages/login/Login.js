@@ -2,10 +2,10 @@ import React from 'react'
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 import FormLogin from "./form/LoginForm";
-import { NavigationKeeper } from "../../common";
-import * as uiActions from "../../store/ui/navigation/actions";
-import * as routers from "../../constants/routers";
-import * as selectorsAuth from "../../store/auth/reducer";
+import { NavigationKeeper } from "../../navigation";
+import * as uiActions from "../../../store/ui/navigation/actions";
+import * as routers from "../../../constants/routers";
+import * as selectorsAuth from "../../../store/auth/reducer";
 
 const Login = () => (
     <NavigationKeeper routerToKeep={routers.ROOT} objectToKeep={selectorsAuth}>
